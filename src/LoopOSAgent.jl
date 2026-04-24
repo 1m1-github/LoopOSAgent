@@ -3,15 +3,17 @@ module LoopOSAgent
 using LoopOSAgentTextCommunication
 using LoopOSAgentgodCommunication
 
-function init(name, group, textrouterlocation, textpublocation, togcreatelocation, togobservelocation)
-    LoopOSAgentTextCommunication.init(group, textrouterlocation, textpublocation)
-    LoopOSAgentCommunication.init(togcreatelocation, togobservelocation)
+function start(name, group, textrouterlocation, textpublocation, togcreatelocation, togobservelocation)
+    LoopOSAgentTextCommunication.start(group, textrouterlocation, textpublocation)
+    LoopOSAgentCommunication.start(togcreatelocation, togobservelocation)
 end
 
 using StaticArrays
 using TheoryOfGodgod: god
+const invϕ = one(T) / MathConstants.golden
 const GOD = god(;
-    d = SA[zero(T)],
+    ω = Ω,
+    d = SA[invϕ, invϕ^2, invϕ^3],
     t = t(),
     ẑeroμ = SA[○, ○, ○],
     ôneμ = SA[○, ○, ○],
