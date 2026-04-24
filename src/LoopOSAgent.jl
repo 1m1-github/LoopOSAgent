@@ -9,6 +9,7 @@ function start(name, group, textrouterlocation, textpublocation, togcreatelocati
 end
 
 using StaticArrays
+using TheoryOfGod: T
 using TheoryOfGodgod: god
 const invϕ = one(T) / MathConstants.golden
 const GOD = god(;
