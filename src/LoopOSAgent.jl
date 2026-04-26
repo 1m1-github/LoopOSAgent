@@ -12,7 +12,7 @@ end
 # using TheoryOfGod: T
 # using TheoryOfGodgod: god
 # const invϕ = one(T) / MathConstants.golden
-# const GOD = god(;
+# const GOD = god(
 #     ω = Ω,
 #     d = SA[invϕ, invϕ^2, invϕ^3],
 #     t = t(),
